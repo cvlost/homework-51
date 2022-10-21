@@ -24,11 +24,11 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className="balls-container">
         {numbers.map((number) => <Ball content={number} key={number}/>)}
       </div>
-      <div>
-        <button onClick={changeNewNumbers}>New Numbers</button>
+      <div className="controls">
+        <button className="change-btn" onClick={changeNewNumbers}>New Numbers</button>
       </div>
     </div>
   );

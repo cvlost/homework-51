@@ -2,37 +2,58 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.controls {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.change-btn {
+  outline: none;
+  padding: 1em 2em;
+  background-color: #b2c8d4;
+  color: black;
+  font-size: 2em;
+  border: 0;
+  transition: background-color .3s, box-shadow .1s;
+  cursor: pointer;
+  border-radius: .3em;
+  margin: 0 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.change-btn:hover {
+  background-color: #71afd1;
+}
+
+.change-btn:active {
+  box-shadow: 0 0 10px gray;
+}
+
+.ball {
+  --size: 3em;
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  font-size: 3em;
+  font-weight: bold;
+  margin: 1em;
+  color: rgb(77,77,77);
+  border-radius: 50%;
+  box-shadow: 0 1em 2em gainsboro;
+  background: radial-gradient(transparent, #b2c8d4);
+}
+
+.balls-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 750px) {
+  body {
+    font-size: .8em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .ball {
+    margin: .5em;
   }
 }

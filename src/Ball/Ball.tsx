@@ -6,7 +6,7 @@ interface BallProps {
 
 const Ball: React.FC<BallProps> = (props) => {
   return (
-    <div>
+    <div className="ball">
       {props.content}
     </div>
   );
