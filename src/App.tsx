@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Ball from "./Ball/Ball";
 
@@ -18,9 +18,18 @@ function App() {
     return numbers;
   };
 
+  const [numbers, setNumbers] = useState(getNumbers());
+
+  const changeNewNumbers = () => setNumbers(getNumbers());
+
   return (
     <div className="App">
-      {getNumbers().map(number => <Ball content={number} key={number} />)}
+      <div>
+        {numbers.map((number) => <Ball content={number} key={number}/>)}
+      </div>
+      <div>
+        <button onClick={changeNewNumbers}>New Numbers</button>
+      </div>
     </div>
   );
 }
